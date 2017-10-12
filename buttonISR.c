@@ -58,7 +58,7 @@ void buttonISR(void* context, alt_u32 id)
     	LCD_text("Key 2 Pressed ..");	//Displays what key is pressed
     	break;
 
-    case KEY3:	                                        //KEY3 is the third bit in the edge capture register
+    case KEY3:	                                        
     	toggleBCDHEX();									//Switches between Hex or BCD
     	LCD_cursor(0,1);
     	LCD_text("Key 3 Pressed ..");	//Displays what key is pressed
