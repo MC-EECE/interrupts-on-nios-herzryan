@@ -3,8 +3,6 @@
 #include "alt_types.h"
 #include "timerISR.h"
 #include "buttonISR.h"
-
-
 /*******************************************************************************
  * int main()                                                                  *
  *                                                                             *
@@ -25,15 +23,11 @@ int main(void)
 	IOWR(PUSHBUTTONS_BASE, 2, 0xE);										//push button interrupts
     /* Initialize Timer */
 	IOWR(INTERVAL_TIMER_BASE, 2, 0xFFFF&INTERVAL_TIMER_FREQ);
-
-
 	IOWR(INTERVAL_TIMER_BASE, 3, 0xFFFF&(INTERVAL_TIMER_FREQ >> 16));
-
 	IOWR(INTERVAL_TIMER_BASE, 1, 0x7);									//Enables timer
 	/* Loop while processing interrupts */
     while( 1 ) 
     {
-
     }
     return 0; // should never get here
 }
