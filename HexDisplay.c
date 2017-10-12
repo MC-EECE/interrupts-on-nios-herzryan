@@ -1,10 +1,3 @@
-/*
- * HexDisplay.c
- *
- *  Created on: Apr 21, 2015
- *      Author: brent.horine
- */
-
 #include "alt_types.h"
 #include "io.h"
 #include "system.h"
@@ -17,7 +10,6 @@ extern volatile alt_u8 display_as_bcd;
 void toggleBCDHEX() {
 	display_as_bcd = !display_as_bcd;
 }
-
 void HexDisplay(alt_u32 * base, alt_u16 num) {
 	alt_u8 lead_zero = 0x01&IORD(SLIDER_SWITCHES_BASE, 0);
 	if (display_as_bcd) {
