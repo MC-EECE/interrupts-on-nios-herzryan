@@ -1,9 +1,3 @@
-/*
- * buttonISR.c
- *
- *  Created on: 
- *      Author: 
- */
 #include "System.h"
 #include "alt_types.h"
 #include "buttonISR.h"
